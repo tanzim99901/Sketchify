@@ -15,7 +15,9 @@ def dodge(front,back):
 def grayscale(rgb):
     return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
 
-img1 = "https://www.catster.com/wp-content/uploads/2017/08/Pixiebob-cat.jpg" #INSERT IMAGE FILE OR URL HERE
+#INSERT IMAGE FILES OR URLs HERE
+
+img1 = "https://www.catster.com/wp-content/uploads/2017/08/Pixiebob-cat.jpg" 
 img2 = "man.jpg"
 img3 = "cat.jpg"
 img4 = "dog.jpg"
@@ -32,11 +34,3 @@ plt.imsave('img.png', final_img, cmap='gray', vmin=0, vmax=255)
 final = Image.open('img.png')
 
 final.show()
-
-
-
-
-
-
-
-
