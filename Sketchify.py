@@ -24,13 +24,13 @@ img4 = "dog.jpg"
 img5 = "baby.jpg"
 
 start_img = imageio.imread(img3)
-gray_img = grayscale(start_img)
-inverted_img = 255-gray_img
-blur_img = scipy.ndimage.filters.gaussian_filter(inverted_img,sigma=sigma_value)
-final_img= dodge(blur_img,gray_img)
+gray_img = grayscale(start_img)		#CONVERT TO GRAYSCALE
+inverted_img = 255-gray_img			#INVERT IMAGE
+blur_img = scipy.ndimage.filters.gaussian_filter(inverted_img,sigma=sigma_value)	#BLUR IMAGE
+final_img= dodge(blur_img,gray_img)		#USE DODGE FUNCTION TO GET THE FINAL IMAGE
 
-plt.imsave('img.png', final_img, cmap='gray', vmin=0, vmax=255)
+plt.imsave('img.png', final_img, cmap='gray', vmin=0, vmax=255)		#SAVE THE SKETCH
 
-final = Image.open('img.png')
+final = Image.open('img.png')		#VIEW THE SKETCH
 
 final.show()
